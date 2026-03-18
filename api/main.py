@@ -162,6 +162,8 @@ def process_alert(json_data):
             generated_prompt = alert.generate_prompt()
             log("-- [INFO] GENERATED PROMPT", generated_prompt)
 
+            # TODO (rmagan): hacer un prompt específico para que me de detalles sobre la alerta
+
             # Call LLM API to get response
             gemini = Gemini()
             response = gemini.send_prompt(model="gemini-2.5-flash", prompt=generated_prompt)
