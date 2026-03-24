@@ -1,2 +1,4 @@
 # Don't upload ssh folder
 ssh/
+# Don't upload .env file with sensitive information
+.env
